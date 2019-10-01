@@ -1,4 +1,17 @@
 <h3>Work TO Do</h3>
-<mat-list role="list">
+<!--<mat-list role="list">
         <mat-list-item role="listitem" *ngFor="let employee of wlist">Reminder: {{employee.work}} Date:{{employee.date}}</mat-list-item>
-</mat-list>
+</mat-list>-->
+<mat-accordion >
+        <mat-expansion-panel *ngFor="let employee of wlist">
+          <mat-expansion-panel-header >
+            <mat-panel-title >
+              Reminder: {{employee.work}}
+            </mat-panel-title>
+            <mat-panel-description >
+              Date: {{employee.date}}
+            </mat-panel-description>
+          </mat-expansion-panel-header><br>
+          <p >{{employee.comment}}</p>
+</mat-expansion-panel>
+</mat-accordion>

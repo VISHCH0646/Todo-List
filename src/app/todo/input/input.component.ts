@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TodoList} from '../todo.list';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-input',
@@ -8,11 +9,13 @@ import {TodoList} from '../todo.list';
 })
 export class InputComponent {
 
-  constructor(private o:TodoList) { }
-
+  constructor(private o:TodoList,private _snackBar: MatSnackBar) { }
   work
   wdate
-  
+  comment
+  openSnackBar() {
+    this._snackBar.open("Work Added","OK",
+      {duration: 2000});}
 
   addWork()
   {
@@ -21,8 +24,10 @@ export class InputComponent {
     this.o.setList(this.mylist)*/
      const mylist={
       work:this.work,
-      date:this.wdate
+      date:this.wdate,
+      comment:this.comment
     }
-    this.o.setList(mylist)
+    console.log(mylist)
+    this.o.setList(mylist);
   }
 }

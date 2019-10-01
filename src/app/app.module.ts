@@ -14,6 +14,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {FormsModule} from '@angular/forms';
 import { TodoList} from './todo/todo.list';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import { FooterComponent } from './todo/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,8 @@ import { TodoList} from './todo/todo.list';
     TodoComponent,
     HeaderComponent,
     InputComponent,
-    ListComponent
+    ListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +38,13 @@ import { TodoList} from './todo/todo.list';
     MatDatepickerModule,
     MatButtonModule,
     MatListModule,
-    FormsModule
+    FormsModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatSnackBarModule
   ],
-  providers: [TodoList],
-  bootstrap: [AppComponent]
+  providers: [TodoList,InputComponent],
+  bootstrap: [AppComponent,InputComponent]
 })
 export class AppModule { }
+platformBrowserDynamic().bootstrapModule(AppModule);

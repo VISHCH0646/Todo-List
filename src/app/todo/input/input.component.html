@@ -1,7 +1,11 @@
 <h3>Add Work</h3>
-        <mat-form-field class="example-full-width">
+
+        <mat-form-field >
           <input matInput placeholder="work" value="" [(ngModel)]="work">
         </mat-form-field><br>
         <input type="date" [(ngModel)]="wdate"><br><br>
-        <button mat-button (click)="addWork()">Add</button>
-      
+       
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Leave a comment" [(ngModel)]="comment"></textarea>
+        </mat-form-field><br><br>
+        <button mat-button (click)="openSnackBar();addWork()">Add</button>

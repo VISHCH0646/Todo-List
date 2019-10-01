@@ -5,7 +5,7 @@ import {Injectable} from '@angular/core';
 export class TodoList
 {
     wlist=[
-        {work:'Work Home',date:'26-3-2019'}
+        {work:'Work Home',date:'26-3-2019',comment:"NA"}
     ]
     getlist()
     {

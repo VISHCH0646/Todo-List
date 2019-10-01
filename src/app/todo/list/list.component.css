@@ -2,3 +2,8 @@ h3{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: darkred;
 }
+mat-expansion-panel{
+    background-color:ghostwhite;
+}
+
+

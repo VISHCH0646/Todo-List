@@ -13,5 +13,6 @@ export class ListComponent implements OnInit {
   ngOnInit() {this.wlist=this.o.getlist()
   }
   
+  
 
 }
